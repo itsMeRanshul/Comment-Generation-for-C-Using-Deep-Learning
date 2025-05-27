@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-in {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out;
+}
+
+.textarea {
+  @apply w-full h-56 bg-black/40 text-white rounded-xl p-4 border border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 resize-none font-mono;
+}
+
+.neon-text {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+.neon-glow {
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
